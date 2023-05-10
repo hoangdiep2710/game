@@ -5,7 +5,7 @@
 #  Giới thiệu 
 • Dino running được lấy ý tưởng từ Dinosaur running, đây là một trò chơi mang tính giải trí cao để giết thời gian nhưng vẫn không kém phần thú vị mỗi khi mất mạng trên Chrome. Game đã trở nên vô cùng phổ biến và gắn liền với tuổi thơ của thế hệ 10X trên toàn thế giới.
 •	Điểm cộng rất lớn của Dino running là nó không chỉ được nâng cấp về tính năng, độ khó của game mà còn vô cùng mãn nhãn với phần đồ hoạ sinh động, đẹp mắt.
-•	Dino running được viết bằng ngôn ngữ C++, kết hợp sử dụng thư viện SDL2
+•	Dino running được viết bằng ngôn ngữ C++, kết hợp sử dụng thư viện SDL2.
 # Lý do chọn game
 •	Đối với phiên bản Chrome cũ, thao tác còn chưa được cải thiện, hình ảnh không được mượt mà, cộng thêm không phải người dùng nào cũng 'dễ dàng' mất kết nối Internet để truy cập vào game.
 •	Đặc biệt phù hợp với hầu như mọi lứa tuổi ( trên 3), vừa giúp tăng khả năng phản xạ và tránh nhàm chán khi người dùng không có phương tiện kết nối với Internet.
