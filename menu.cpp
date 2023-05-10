@@ -14,10 +14,10 @@ int show_menu(SDL_Surface * screen)
     SDL_Rect Exitbutton_scr = {240,0,120,60};
     SDL_Rect Exitbutton_bright_scr = {240,60,120,60};
 
-    SDL_Texture* back_Tex = IMG_LoadTexture(renderer, "D:/dinosaur/img/dinosaurs-5687815_1280.jpg");
+    SDL_Texture* back_Tex = IMG_LoadTexture(renderer, "img/dinosaurs-5687815_1280.jpg");
     SDL_RenderCopy(renderer, back_Tex,&Back_scr,NULL);
 
-    SDL_Texture* button = IMG_LoadTexture(renderer, "D:/dinosaur/img/Button.png");
+    SDL_Texture* button = IMG_LoadTexture(renderer, "img/Button.png");
 
     SDL_RenderCopy(renderer, button,&Playbutton_scr,&Playbutton_dest);
     SDL_RenderCopy(renderer, button,&Exitbutton_scr,&Exitbutton_dest);

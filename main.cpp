@@ -69,22 +69,22 @@ int main(int argc, char* agrv[])
     srand(time(0));
     init();
 
-    SDL_Texture* Player_Tex = IMG_LoadTexture(renderer, "D:/dinosaur/img/nv1.png");
-    SDL_Texture* tree_Tex = IMG_LoadTexture(renderer, "D:/dinosaur/img/xuongrong.png");
-    SDL_Texture* bird_Tex = IMG_LoadTexture(renderer, "D:/dinosaur/img/bird1.png");
-    SDL_Texture* menu = IMG_LoadTexture(renderer, "D:/dinosaur/img/menu.png");
-    SDL_Texture* back_Tex = IMG_LoadTexture(renderer, "D:/dinosaur/img/bachrao.jpg");
-    SDL_Texture* back2_Tex= IMG_LoadTexture(renderer, "D:/dinosaur/img/background2.jpg" );
-    SDL_Texture* back3_Tex= IMG_LoadTexture(renderer, "D:/dinosaur/img/background3.jpg" );
-    SDL_Texture* ket1 = IMG_LoadTexture(renderer, "D:/dinosaur/img/ket1.png");
-    SDL_Texture* ket2 = IMG_LoadTexture(renderer, "D:/dinosaur/img/ket2.png");
-    SDL_Texture* ket3 = IMG_LoadTexture(renderer, "D:/dinosaur/img/ket3.png");
-    Mix_Chunk *  gScratch = Mix_LoadWAV("D:/dinosaur/sound/scratch.wav");
-    Mix_Music* gMusic = Mix_LoadMUS( "D:/dinosaur/sound/music.wav" );
-    SDL_Texture* pausebutton = IMG_LoadTexture(renderer, "D:/dinosaur/img/pausebutton.png");
-    SDL_Texture* continuebutton = IMG_LoadTexture(renderer, "D:/dinosaur/img/continue.png");
-    SDL_Texture* musicbutton = IMG_LoadTexture(renderer, "D:/dinosaur/img/volum.png");
-    SDL_Texture* pause = IMG_LoadTexture(renderer, "D:/dinosaur/img/pause.jpg");
+    SDL_Texture* Player_Tex = IMG_LoadTexture(renderer, "img/nv1.png");
+    SDL_Texture* tree_Tex = IMG_LoadTexture(renderer, "img/xuongrong.png");
+    SDL_Texture* bird_Tex = IMG_LoadTexture(renderer, "img/bird1.png");
+    SDL_Texture* menu = IMG_LoadTexture(renderer, "img/menu.png");
+    SDL_Texture* back_Tex = IMG_LoadTexture(renderer, "img/bachrao.jpg");
+    SDL_Texture* back2_Tex= IMG_LoadTexture(renderer, "img/background2.jpg" );
+    SDL_Texture* back3_Tex= IMG_LoadTexture(renderer, "img/background3.jpg" );
+    SDL_Texture* ket1 = IMG_LoadTexture(renderer, "img/ket1.png");
+    SDL_Texture* ket2 = IMG_LoadTexture(renderer, "img/ket2.png");
+    SDL_Texture* ket3 = IMG_LoadTexture(renderer, "img/ket3.png");
+    Mix_Chunk *  gScratch = Mix_LoadWAV("sound/scratch.wav");
+    Mix_Music* gMusic = Mix_LoadMUS( "sound/music.wav" );
+    SDL_Texture* pausebutton = IMG_LoadTexture(renderer, "img/pausebutton.png");
+    SDL_Texture* continuebutton = IMG_LoadTexture(renderer, "img/continue.png");
+    SDL_Texture* musicbutton = IMG_LoadTexture(renderer, "img/volum.png");
+    SDL_Texture* pause = IMG_LoadTexture(renderer, "img/pause.jpg");
     SDL_Rect Pause = {0,0,840,600};
     SDL_Rect Menu = {300, 350, 200, 100};
     SDL_Rect Back2 ={0,0,1200,600};
@@ -95,7 +95,7 @@ int main(int argc, char* agrv[])
        SDL_Rect Pausebutton = {790, 0, 50, 52};
        SDL_Rect Continuebutton = {297, 200, 206,100};
        SDL_Rect Musicbutton= {790,60,50,52};
-    TTF_Font* Font = TTF_OpenFont("D:/dinosaur/font/Welbut__.ttf", 20);
+    TTF_Font* Font = TTF_OpenFont("font/Welbut__.ttf", 20);
 
     if( Font == NULL )
     {
