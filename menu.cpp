@@ -3,7 +3,8 @@
 using namespace std;
 
 int show_menu(SDL_Surface * screen)
-{
+{ 
+    int u=1;
     SDL_Rect Back_scr = {0,0,840,600};
     // nut Play
     SDL_Rect Playbutton_dest = {360,240,120,60};
@@ -18,10 +19,15 @@ int show_menu(SDL_Surface * screen)
     SDL_RenderCopy(renderer, back_Tex,&Back_scr,NULL);
 
     SDL_Texture* button = IMG_LoadTexture(renderer, "img/Button.png");
-
+    SDL_Texture* help =IMG_LoadTexture(renderer, "img/help.png");
+    SDL_Rect Help={790, 0, 50, 50};
+    SDL_Texture* help2= IMG_LoadTexture(renderer, "img/help2.png");
+    SDL_Rect Help2={0, 0, 840, 600};
+    SDL_Texture* back = IMG_LoadTexture(renderer, "img/back.png");
+    SDL_Rect Back={0,0, 100, 100};
     SDL_RenderCopy(renderer, button,&Playbutton_scr,&Playbutton_dest);
     SDL_RenderCopy(renderer, button,&Exitbutton_scr,&Exitbutton_dest);
-
+    SDL_RenderCopy(renderer, help, NULL, &Help);
     bool selected[2] = {0,0};
     int x, y;
     SDL_Rect Pos_menu[2];
@@ -36,7 +42,7 @@ int show_menu(SDL_Surface * screen)
             {
                 return 1;
             }
-            if (event.type == SDL_MOUSEMOTION)
+            if (event.type == SDL_MOUSEMOTION && u==1)
             {
                 x = event.motion.x;
                 y = event.motion.y;
@@ -72,15 +78,35 @@ int show_menu(SDL_Surface * screen)
                         SDL_RenderCopy(renderer,button,&Exitbutton_scr,&Exitbutton_dest);
                     }
                 }
+                
             }
+            if (event.type == SDL_MOUSEBUTTONDOWN)
+                        {
+                            if(event.button.x >= 790 && event.button.y <=50  )
+                            {  u=2;
+                                 SDL_RenderClear(renderer);
+                                SDL_RenderCopy(renderer, help2, NULL, &Help2); 
+                                SDL_RenderCopy(renderer, back, NULL, &Back);  } 
+                                if(event.button.x <=100 && event.button.y <=100&& u==2) {
+                                 SDL_RenderClear(renderer); 
+                                 u=1;
+                                 SDL_RenderCopy(renderer, back_Tex,&Back_scr,NULL);
+                                 SDL_RenderCopy(renderer, button,&Playbutton_scr,&Playbutton_dest);
+                                 SDL_RenderCopy(renderer, button,&Exitbutton_scr,&Exitbutton_dest);
+                                 SDL_RenderCopy(renderer, help, NULL, &Help);
+    }
+
+                            
+                        }
             x = event.button.x;
             y = event.button.y;
             for (int i = 0; i <= 2; i++)
             {
-                if (check_click(Pos_menu[i],x,y))
+                if (check_click(Pos_menu[i],x,y) && u==1)
                     if(event.type == SDL_MOUSEBUTTONDOWN)
                         return i;
             }
+           
 
         }
         SDL_RenderPresent(renderer);

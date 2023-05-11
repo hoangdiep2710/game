@@ -7,5 +7,4 @@
 using namespace std;
 
 int show_menu(SDL_Surface *screen);
-
 #endif

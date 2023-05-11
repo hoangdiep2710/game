@@ -24,7 +24,7 @@ void init()
         {
             cout << "Warning: Linear texture filtering not enabled!" ;
         }
-        window = SDL_CreateWindow( "ディエップ の ゲーム", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN );
+        window = SDL_CreateWindow( "DINO RUNNING", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN );
         if( window == NULL )
         {
             cout << "Window could not be created! SDL Error: "<< endl << SDL_GetError() ;
