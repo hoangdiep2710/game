@@ -25,11 +25,13 @@
 
 •	Điểm số sẽ tỉ lệ thuận với thời gian mà người chơi chơi được khi chưa va phải vật cản ( tức là càng chơi lâu thì điểm càng cao ) , điểm chơi cao nhất sẽ được hệ thống ghi nhận lại
 # Mô tả tính năng
-![image](https://github.com/hoangdiep2710/hello/assets/125895429/9ea4b519-dd48-435a-b0eb-430debae0b63)
+<img width="631" alt="image" src="https://github.com/hoangdiep2710/hello/assets/125895429/1831c9cf-f3d7-482e-b29b-90da1e74a754">
 
 •	Click vào Play để bắt đầu game
 
 •	Click vào Quit hoặc biểu tượng X ở góc phải màn hình để thoát game
+
+• Click vào biểu tượng dấu chấm hỏi để nắm rõ hơn về luật chơi.
 
 ![image](https://github.com/hoangdiep2710/hello/assets/125895429/963569cc-16e7-49b5-94da-d9b58d85a681)
 
