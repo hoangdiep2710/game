@@ -81,6 +81,8 @@ int main(int argc, char* agrv[])
     SDL_Texture* ket3 = IMG_LoadTexture(renderer, "img/ket3.png");
     Mix_Chunk *  gScratch = Mix_LoadWAV("sound/scratch.wav");
     Mix_Music* gMusic = Mix_LoadMUS( "sound/music.wav" );
+    Mix_Chunk* glose = Mix_LoadWAV( "sound/lose.wav" );
+    Mix_Chunk* gbird = Mix_LoadWAV( "sound/chim.wav" );
     SDL_Texture* pausebutton = IMG_LoadTexture(renderer, "img/pausebutton.png");
     SDL_Texture* continuebutton = IMG_LoadTexture(renderer, "img/continue.png");
     SDL_Texture* musicbutton = IMG_LoadTexture(renderer, "img/volum.png");
@@ -249,7 +251,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                 }
 
                 if(checkCollision(Obstacle.des_tree,Character.des_player)&& score<=200)
-                {  
+                {    Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
                     
                     Character.down = 0;
@@ -268,7 +270,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                     break;
                 }
                 if(checkCollision(Animal.Bird_des,Character.des_player) && score<=200)
-                {
+                {    Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
                     
                     Character.down = 0;
@@ -287,7 +289,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                 }
                 
                  if(checkCollision(Obstacle.des_tree,Character.des_player)&& score>200 && score<=450)
-                {
+                {   Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
                    
                     Character.down = 0;
@@ -306,7 +308,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                     break;
                 }
                  if(checkCollision(Obstacle.des_tree,Character.des_player)&& score>450)
-                {
+                {    Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
                     
                     Character.down = 0;
@@ -324,7 +326,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                     break;
                 }
                 if(checkCollision(Animal.Bird_des,Character.des_player) && score>200 && score<=450)
-                {
+                {   Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
                     
                     Character.down = 0;
@@ -343,7 +345,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                     break;
                 }
                 if(checkCollision(Animal.Bird_des,Character.des_player) && score>450)
-                {
+                {   Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
                     
                     Character.down = 0;
@@ -360,6 +362,10 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                     Animal.bird_val=-6.5;
                     break;
                 }
+                if(Animal.Bird_des.x>720&&Animal.Bird_des.x<840){
+                    Mix_PlayChannel( -1, gbird, 0 );
+                }
+
                 if(Obstacle.des_tree.x < 0)
                 {
                     Obstacle.des_tree.x = rand()%100+1000;
@@ -428,9 +434,13 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
             if((SDL_PollEvent(&event) != 0 && event.type == SDL_QUIT) || showmenu == 1)
             {
                 Mix_FreeChunk( gScratch );
+                Mix_FreeChunk(glose);
                 Mix_FreeMusic(gMusic);
+                Mix_FreeChunk(gbird);
                 gScratch=NULL;
                 gMusic=NULL;
+                 glose=NULL;
+                 gbird=NULL;
                 Mix_Quit();
                 quitSDL(window, renderer);
                 return 0;
