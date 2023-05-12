@@ -33,6 +33,7 @@
 •	Click vào Play để bắt đầu game
 
 •	Click vào Quit hoặc biểu tượng X ở góc phải màn hình để thoát game
+
 •	Click vào biểu tượng dấu chấm hỏi để tìm hiểu rõ hơn về cách chơi.
 
 ![image](https://github.com/hoangdiep2710/hello/assets/125895429/089db1c1-a517-4af0-8f76-6345b6acee50)
