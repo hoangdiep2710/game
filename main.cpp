@@ -287,7 +287,7 @@ SDL_RenderCopy(renderer, musicbutton, NULL, &Musicbutton);
                     Animal.bird_val=-6.5;
                     break;
                 }
-                
+                if(score<200){Animal.Bird_des.y=370;}
                  if(checkCollision(Obstacle.des_tree,Character.des_player)&& score>200 && score<=450)
                 {   Mix_PlayChannel( -1, glose, 0 );
                     gameRunning = false;
